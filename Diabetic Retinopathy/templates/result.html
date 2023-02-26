@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block title %} Result {% endblock title %} {% block body %} {% csrf_token %}
+<div class="container mt-4 mb-3 py-4 w-50" style="border:1px solid black ">
+    <center>
+        <h4>Patient Name:{{l1}}</h4>
+        <h4>Email:{{l2}}</h4>
+        <h4>Gender:{{l3}}</h4>
+        <h4>Age:{{l4}}</h4>
+        <h4>Phone NUmber{{l5}}</h4>
+        <!-- {{filepathname}}{{filepathname1}} -->
+        <h3>Result</h3>
+        <h4>Right Image</h4>
+        <img src="{{filepathname}}" alt="">
+        <h4>{{predictedLabel}}</h4> <br>
+        <h4>Left Image</h4>
+        <img src="{{filepathname1}}" alt="">
+        <h4>{{predictedLabel1}} </h4><br> {% endblock body %}
+    </center>
+</div>

@@ -1,0 +1,41 @@
+{% extends 'base.html' %} {% block title %} Report {% endblock title %} {% block body %}
+<!-- <h2>{{drlist}}</h2> -->
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">S.No</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone No.</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Age</th>
+            <th scope="col">Right Image</th>
+            <th scope="col">Left Image</th>
+            <th scope="col">R Result</th>
+            <th scope="col">L Result</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in drlist %}
+        <tr>
+            <th scope="row">{{item.id}}</th>
+            <td>{{item.name1}}</td>
+            <td>{{item.email1}}</td>
+            <td>{{item.phone1}}</td>
+            <td>{{item.gender}}</td>
+            <td>{{item.age}}</td>
+            <td>
+                <a class="btn btn-primary" href="/media/{{item.right}}" role="button">Link</a>
+            </td>
+            <td>
+                <a class="btn btn-primary" href="/media/{{item.left}}" role="button">Link</a>
+            </td>
+            <td>{{item.rprediict}}</td>
+            <td>{{item.lpredict}}</td>
+        </tr>
+        {% endfor %}
+
+
+    </tbody>
+</table>
+{% endblock body %}
